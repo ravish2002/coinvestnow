@@ -1390,25 +1390,140 @@ address.footer-contact-link { max-width: 30ch; }
 }
 
 
-.header > .container {
+ 
+@media screen and (min-width: 769px) {
+  .mobile-market-table { 
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .market-table:not(.mobile-market-table) { 
+    display: none;
+  }
+  .mobile-market-table { 
+    display: table;
+    width: 100%;
+  }
+}
+.mobile-market-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mobile-market-table .table-heading {
+  color: var(--white);
+  font-size: var(--fs-5);
+  text-align: left;
+  padding: 8px;
+}
+
+.mobile-market-table .table-row {
+  height: 90px;
+  border-block-end: 1px solid var(--raisin-black);
+  transition: var(--transition-1);
+}
+
+.mobile-market-table .table-row:hover {
+  background-color: var(--blue-crayola_10);
+}
+
+.mobile-market-table .wrapper {
   display: flex;
-  justify-content: space-between; /* Space out logo and nav links */
   align-items: center;
+  gap: 8px;
 }
 
-.header > .container {
+.mobile-market-table .coin-name {
+  color: var(--white);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-700);
+  transition: var(--transition-1);
+}
+
+.mobile-market-table .coin-name:hover {
+  color: var(--blue-crayola);
+}
+
+.mobile-market-table .last-price {
+  color: var(--white);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-700);
+
+}
+
+@media screen and (max-width: 768px) {
+  .title-wrapper {
+    text-align: center;
+  }
+  
+  .title-wrapper .section-title {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+.mobile-market-table {
+  margin: 0 15px;
+  width: calc(100% - 30px);
+}
+
+.mobile-market-table .table-heading,
+.mobile-market-table .table-data {
+  padding: 30px;
+}
+@media screen and (max-width: 768px) {
+  .btn-primary {
+    margin: 20px auto;
+    display: block;
+    width: fit-content;
+  }
+}
+.footer-brand {
+  text-align: center;
   display: flex;
-  justify-content: space-between; /* Space out logo and nav links */
+  flex-direction: column;
   align-items: center;
-}
-
-.logo {
-  margin-right: auto; /* Ensure the logo stays at the very left */
-}
-
-.navbar {
-  margin-left: auto; /* Push the navbar to the far right */
+ }
+ 
+ .footer-brand .logo {
   display: flex;
-  justify-content: flex-end; /* Align items to the right inside navbar */
-  gap: 20px; /* Add space between navigation links */
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 15px;
+ }
+ 
+ .nav__logo-icon {
+  margin-right: 5px;
+ }
+
+ .trusted-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 8px 20px;
+  border-radius: 50px;
+  width: fit-content;
+ margin-bottom: 40px;
+ margin-top: -40px;
+}
+
+.trusted-badge .fa-star {
+  color: #FFD700;  /* Golden yellow color */
+}
+
+.trusted-badge span {
+  color: var(--white);
+  font-weight: var(--fw-500);
+}
+
+@media screen and (max-width: 768px) {
+  .trusted-badge {
+    margin-left: 25%;
+   margin-top: -45px;
+
+  }
 }
